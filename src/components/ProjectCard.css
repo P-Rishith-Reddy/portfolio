@@ -1,0 +1,132 @@
+/* =========================================
+   PROJECT CARD
+   ========================================= */
+.project-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+  opacity: 0; /* starts hidden; fadeInUp fills it */
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-hover);
+  box-shadow: 0 12px 40px rgba(88, 166, 255, 0.12);
+  background: var(--bg-card-hover);
+}
+
+/* Gradient top bar */
+.project-card__accent {
+  height: 3px;
+  background: var(--accent-gradient);
+  width: 0;
+  transition: width 0.4s ease;
+}
+
+.project-card:hover .project-card__accent {
+  width: 100%;
+}
+
+.project-card__body {
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--space-md);
+}
+
+/* Header row: folder icon + github icon */
+.project-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-card__icon {
+  color: var(--accent-primary);
+}
+
+.project-card__github-btn {
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.project-card__github-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Title */
+.project-card__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Description */
+.project-card__desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  flex: 1;
+}
+
+/* Tags */
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.project-card__tag {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--accent-primary);
+  background: var(--tag-bg);
+  border: 1px solid rgba(88, 166, 255, 0.2);
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+}
+
+/* Footer link */
+.project-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+  text-decoration: none;
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--border);
+  transition: var(--transition);
+  margin-top: auto;
+}
+
+.project-card__link:hover {
+  color: #90c8ff;
+  gap: 0.55rem;
+}
+
+.project-card__link svg {
+  transition: var(--transition);
+}
+
+.project-card__link:hover svg {
+  transform: translate(2px, -2px);
+}
