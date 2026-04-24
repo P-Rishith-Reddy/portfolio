@@ -6,7 +6,7 @@ import './Projects.css';
 function Projects() {
   return (
     <div className="projects-page">
-      {/* ── PAGE HEADER ──────────────────────────────── */}
+
       <section className="projects-hero container">
         <div className="fade-in-up">
           <h1 className="projects-hero__title gradient-text">Projects</h1>
@@ -15,7 +15,7 @@ function Projects() {
           </p>
         </div>
 
-        {/* Stats bar */}
+
         <div className="projects-stats fade-in-up delay-2">
           <div className="stat">
             <span className="stat__num">{projects.length}</span>
@@ -24,7 +24,7 @@ function Projects() {
           <div className="stat-divider" />
           <div className="stat">
             <span className="stat__num">
-              {/* unique tags count */}
+
               {[...new Set(projects.flatMap((p) => p.tags))].length}
             </span>
             <span className="stat__label">Technologies used </span>
@@ -37,14 +37,14 @@ function Projects() {
         </div>
       </section>
 
-      {/* ── PROJECT GRID ─────────────────────────────── */}
+
       <section className="projects-grid container">
         {projects.map((project, index) => (
           <ProjectCard key={project.id} project={project} index={index} />
         ))}
       </section>
 
-      {/* ── CTA BANNER ───────────────────────────────── */}
+
       <section className="projects-cta container fade-in-up">
         <div className="cta-banner">
           <h2 className="cta-banner__title">Want to collaborate?</h2>

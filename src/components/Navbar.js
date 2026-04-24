@@ -18,11 +18,11 @@ function Navbar() {
   return (
     <header className={`navbar${scrolled ? ' navbar--scrolled' : ''}`}>
       <div className="navbar__inner container">
-        {/* Logo / Brand */}
+
         <NavLink to="/" className="navbar__brand" onClick={closeMenu}>
           <span className="brand-name">Portfolio</span>
         </NavLink>
-        {/* Nav links */}
+
         <nav className={`navbar__links${menuOpen ? ' navbar__links--open' : ''}`}>
           <NavLink
             to="/"

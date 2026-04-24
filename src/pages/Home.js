@@ -1,7 +1,7 @@
 import React from 'react';
 import './Home.css';
 
-/* ── Personal data ──────────────── */
+
 const profile = {
   name: 'P.Rishith Reddy',
   phone: '+91 9059660124',
@@ -44,7 +44,7 @@ const profile = {
   ],
 };
 
-/* Smooth-scroll helper (works inside HashRouter) */
+
 const scrollTo = (id) => {
   const el = document.getElementById(id);
   if (el) el.scrollIntoView({ behavior: 'smooth' });
@@ -53,7 +53,7 @@ const scrollTo = (id) => {
 function Home() {
   return (
     <div className="home">
-      {/* ── HERO ────────────────────────────────────── */}
+
       <section className="hero container">
         <div className="hero__text fade-in-up delay-1">
           <p className="hero__greeting">Hello, I'm</p>
