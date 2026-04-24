@@ -50,22 +50,15 @@
   color: var(--accent-primary);
 }
 
-.project-card__github-btn {
+.project-card__external-btn {
   color: var(--text-muted);
-  text-decoration: none;
-  padding: 0.35rem;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   transition: var(--transition);
+  display: flex;
 }
 
-.project-card__github-btn:hover {
-  color: var(--text-primary);
-  border-color: var(--text-secondary);
-  background: rgba(255, 255, 255, 0.05);
+.project-card__external-btn:hover {
+  color: var(--accent-primary);
+  transform: translateY(-2px);
 }
 
 /* Title */
